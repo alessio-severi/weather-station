@@ -5,6 +5,24 @@ It shows current weather conditions and 7-day weather forecasts for Italian regi
 
 For a detailed technical description and documentation, visit: [chorax.it](https://chorax.it)
 
+## Screenshots
+
+<div align="center">
+  <img src="screenshots/03.png" width="75%" alt="Weather view"/>
+  <br><br>
+  <img src="screenshots/04.png" width="75%" alt="Graph view"/>
+  <br><br>
+  <img src="screenshots/14.png" width="75%" alt="Unit Converter"/>
+  <br><br>
+  <img src="screenshots/16.png" width="75%" alt="Unit Converter result"/>
+  <br><br>
+  <img src="screenshots/27.png" width="75%" alt="Globe View"/>
+</div>
+
+<br>
+
+More screenshots available in the [screenshots](screenshots/) folder.
+
 ## Author
 
 Application design, logo and source code — © 2026 Alessio Severi.
