@@ -1,0 +1,137 @@
+<!--
+  Copyright (C) 2026 Alessio Severi
+
+  This file is part of Weather Station.
+
+  Weather Station is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Weather Station is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Weather Station. If not, see <https://www.gnu.org/licenses/>.
+-->
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Hyperlink?>
+
+
+
+<GridPane styleClass="root-pane" stylesheets="@styles.css"
+          xmlns="http://javafx.com/javafx/25"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="it.chorax.about.AboutCredits">
+  <columnConstraints>
+        <ColumnConstraints percentWidth="25" />
+        <ColumnConstraints percentWidth="75" />
+  </columnConstraints>
+  <rowConstraints>
+        <RowConstraints percentHeight="100" vgrow="ALWAYS" />
+  </rowConstraints>
+  <VBox styleClass="column-left-pane" GridPane.columnIndex="0">
+    <!-- Riga alta: logo / titolo -->
+    <HBox styleClass="sidebar-header">
+      <ImageView
+           fitWidth="120"
+           preserveRatio="true"
+           pickOnBounds="false">
+        <image>
+            <Image url="@../logo.png"/>
+        </image>
+      </ImageView>
+    </HBox>
+
+    <!-- Riga sotto: menu verticale -->
+    <VBox styleClass="sidebar-menu">
+      <Button text="Weather" onAction="#onWeather" styleClass="side-link"/>
+      <Button onAction="#onConverter" styleClass="side-link" text="Unit Converter" />
+      <Button onAction="#onWorld" styleClass="side-link" text="Globe View" />
+      <Button styleClass="side-link" text="Exit" onAction="#onExit" />
+    </VBox>
+    <HBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS" styleClass="about-row">
+      <Hyperlink styleClass="about-link-active" text="About &amp; Credits" />
+    </HBox>
+  </VBox>
+  <VBox styleClass="column-right-pane" GridPane.columnIndex="1">
+    <VBox styleClass="inner-pane" >
+      <!--
+        Titolo principale.
+        styleClass="title-label" ≈ class="title-label"
+      -->
+      <HBox alignment="CENTER">
+        <Label alignment="CENTER" styleClass="title-label" text="About &amp; Credits">
+          <HBox.margin>
+            <Insets top="60.0" bottom="20"/>
+          </HBox.margin>
+        </Label>
+      </HBox>
+      <ScrollPane fitToWidth="true" styleClass="report-scroll">
+        <content>
+            <!-- Questa è la “cartolina” con bordo -->
+            <VBox  alignment="TOP_LEFT"  styleClass="report-card">   <!-- larghezza massima della card -->
+              <VBox styleClass="row" >
+                <Label styleClass="report-subtitle" text="About" />
+                <Label fx:id="aboutTextLabel" styleClass="report-text" />
+              </VBox>
+              <VBox styleClass="row">
+                <Label styleClass="report-subtitle" text="Author" />
+                <HBox>
+                  <Label styleClass="report-text" text= "Application design, logo and source code — " />
+                  <Label styleClass="report-text, bold-report-text" text="© 2026 Alessio Severi" />
+                  <Label styleClass="report-text" text="." />
+                </HBox>
+                <Label styleClass="report-text" text="Source code released under the GNU General Public License v3.0." />
+                <Label styleClass="report-text" text="The full license text is available in the LICENSE file distributed with this application." />
+                <Label styleClass="report-text" text="Third-party components and attribution details are listed in the THIRD-PARTY-NOTICES file distributed with this application." />
+              </VBox>
+              <VBox styleClass="row">
+                <Label styleClass="report-subtitle" text="Services" />
+                <HBox>
+                  <Label fx:id="servicesTextLabel" styleClass="report-text" />
+                </HBox>
+              </VBox>
+              <VBox styleClass="row">
+                <Label styleClass="report-subtitle" text="Other credits" />
+                <HBox>
+                  <Label fx:id="otherTextLabel" styleClass="report-text" />
+                </HBox>
+              </VBox>
+              <VBox>
+                <HBox styleClass="row" fx:id="aboutRoot">
+                  <Label styleClass="report-text" text="For a detailed technical description and documentation, visit: " >
+                    <HBox.margin>
+                      <Insets top="-5" />
+                    </HBox.margin>
+                  </Label>
+                  <Hyperlink onAction="#onOpenWebsite" styleClass="about-link" text="chorax.it" >
+                    <HBox.margin>
+                      <Insets top="-7.5" />
+                    </HBox.margin>
+                  </Hyperlink>
+                </HBox>
+              </VBox>
+            </VBox>
+        </content>
+      </ScrollPane>
+    </VBox>
+  </VBox>
+
+</GridPane>

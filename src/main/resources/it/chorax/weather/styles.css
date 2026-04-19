@@ -1,0 +1,302 @@
+/*
+ * Copyright (C) 2026 Alessio Severi
+ *
+ * This file is part of Weather Station.
+ *
+ * Weather Station is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Weather Station is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Weather Station. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+
+.root-pane {
+
+    -fx-vgap: 0;
+    -fx-hgap: 20;
+    -fx-padding: 0;
+    -fx-background-color: #24252a;
+}
+
+.column-left-pane {
+    -fx-alignment: top-center;
+    -fx-background-color:#0c0f169a; /* colore di base (nero/blu molto scuro) */
+    -fx-border-color: #353840;
+    -fx-border-width: 0 1 0 0;
+
+}
+
+
+.column-right-pane {
+    -fx-alignment: top-center;
+    -fx-background-color: #24252a;
+    
+}
+
+
+.inner-pane {
+    -fx-padding: 0 40 -10 5;                    /* padding:20px; */
+    -fx-background-color: #24252a;      /* background-color */
+    -fx-spacing: 30;                    /* gap verticale tra figli (solo per VBox) */
+    -fx-alignment: top-left;
+    -fx-max-width: 750;
+    -fx-max-height: 960;
+}
+
+/* Titolo principale: simile a h1.title-label { ... } */
+.title-label {
+    -fx-text-fill: #ffffff;             /* color: white; */
+    -fx-font-size: 30px;                /* font-size:22px; */
+    -fx-font-weight: bold;              /* font-weight:bold; */
+}
+
+/* Sottotitolo: simile a p.subtitle-label */
+.subtitle-label {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 18px;
+    -fx-min-height: 80;
+}
+
+
+
+.row {
+    -fx-background-color: #2e303b;      /* background-color */
+    -fx-padding: 20 10 20 10;
+}
+
+
+
+/* ComboBox: simile a select.unit-combo */
+.unit-combo {
+    -fx-max-width: 135;                /* width suggerita */
+    -fx-font-weight: 700;
+    -fx-background-insets: 0;         /* un solo layer */
+}
+
+/* Colore del testo nella parte "nascosta", "vista di default senza tastierino", "tastino nel menu a discesa", "gli ultimi due"
+.combo-box .cell, .combo-box-base .label, .combo-box-base .arrow-button, .combo-box-base { */
+.unit-combo .cell, .combo-box-base {
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-background-radius: 6;
+    -fx-text-fill: #282828be;
+    -fx-border-color: #ffffff;
+    -fx-background-color: #ffffff;
+                  /* border-radius:4px; */
+}
+
+/* Facoltativo: stato selezionato / hover nel menu
+.combo-box .list-cell:selected,*/
+.unit-combo .list-cell:hover {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #3b6ea8;
+    
+}
+
+.combo-box-base:showing,    /* la combo ha il menu aperto */
+.combo-box-base:hover {
+    -fx-border-color: #3b6ea8;
+    
+}
+
+
+
+
+
+/* Pulsante Convert: simile a button.convert-button */
+.etch-button {
+    -fx-background-color: #3a7ee2;      /* background-color */
+    -fx-text-fill: #ffffff;             /* color:white */
+    -fx-font-weight: 700;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 4;           /* border-radius */
+    -fx-font-size: 14px;
+}
+
+/* Stato hover: come .convert-button:hover in CSS */
+.etch-button:hover {
+    -fx-background-color: #2f68b5;
+}
+
+
+
+
+/* -fx-highlight-text-fill: #000000; 
+.text-area {
+    
+    -fx-font-size: 16px;
+    -fx-control-inner-background:#24252a;
+    -fx-font-family: Consolas;
+    -fx-highlight-fill: #00ff00;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 15 15 15 15;
+}
+
+.text-area .scroll-pane .content .text {
+    -fx-text-alignment: center;
+}
+*/
+
+
+
+
+
+/* La “cornice” del report */
+.report-card {
+    -fx-background-color: #252734;        /* colore interno (come prima) */
+    -fx-padding: 28 20 30 20;                      /* spazio interno */
+    -fx-border-color: #4d80ff;            /* colore del bordo */
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    
+}
+
+/* ScrollPane trasparente, niente bianco a destra */
+.report-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+}
+
+.report-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+
+
+.report-titolo {
+                                        /* centratura del paragrafo -fx-text-alignment: CENTER; */
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-wrap-text: true;
+    -fx-padding: 10 0 10 0;
+    -fx-font-weight: 700;
+                             /* -fx-font-family: "SF Mono"; */
+}
+
+/* Testo centrato dentro la card */
+.report-text {
+                                        /* centratura del paragrafo -fx-text-alignment: CENTER; */
+    -fx-text-fill: rgba(154, 164, 195, 0.85);/*#4d7fff51;  */
+    -fx-font-size: 16px;
+    -fx-wrap-text: true;
+    -fx-padding: 10 0 10 0;
+    -fx-font-weight: 400;
+                             /* -fx-font-family: "SF Mono"; */
+}
+
+/* Testo centrato dentro la card */
+.report-value {
+                                        /* centratura del paragrafo -fx-text-alignment: CENTER; */
+    -fx-text-fill: #fffdfd;
+    -fx-font-size: 16px;
+    -fx-wrap-text: true;
+    -fx-padding: 10 0 10 0;
+    -fx-font-weight: 600;
+                             /* -fx-font-family: "SF Mono"; */
+}
+
+
+
+
+/* Riga alta (logo / titolo)  */
+.sidebar-header {
+    -fx-alignment: CENTER;
+    -fx-padding: 25 0 25 0;
+    -fx-min-height: 250;
+    
+    
+}
+
+.sidebar-logo-text {
+    -fx-text-fill: #f5f5f5;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Contenitore del menu 100 0 0 40*/
+.sidebar-menu {
+    -fx-padding: 100 40 0 40;
+    -fx-alignment: CENTER;
+}
+
+/* Link laterali */
+.side-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-max-width: 170;
+
+    -fx-alignment: CENTER;
+    -fx-padding: 15;
+
+    /* bordino sopra e sotto, bianco molto tenue
+    -fx-border-color: rgba(255, 255, 255, 0.18) transparent
+                      rgba(255, 255, 255, 0.18) transparent;
+    */
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+
+    -fx-border-width: 0 0 1.3 0;
+    -fx-cursor: hand;
+}
+
+
+.current-side-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-max-width: 170;
+
+    -fx-alignment: CENTER;
+    -fx-padding: 15;
+
+    /* bordino sopra e sotto, bianco molto tenue
+    -fx-border-color: rgba(255, 255, 255, 0.18) transparent
+                      rgba(255, 255, 255, 0.18) transparent;
+    */
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+
+    -fx-border-width: 0 0 1.3 0;
+}
+
+
+
+/* Hover: leggero highlight */
+.side-link:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Voce attiva (tipo "Services" nero nella reference) */
+.side-link-active {
+    
+    /* sopra resta uguale, sotto molto più chiaro = “dove sono” */
+    -fx-border-color: transparent transparent #4d80ff transparent;
+}
+
+
+
+
+.about-row {
+    -fx-padding: 0 0 40 0;
+}
+
+
+/* Voce attiva (tipo "Services" nero nella reference) */
+.about-link {
+    -fx-underline: false;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+}
+
+.about-link:hover {
+    -fx-text-fill: #4d80ff;
+}

@@ -1,0 +1,131 @@
+<!--
+  Copyright (C) 2026 Alessio Severi
+
+  This file is part of Weather Station.
+
+  Weather Station is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Weather Station is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Weather Station. If not, see <https://www.gnu.org/licenses/>.
+-->
+
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<!--
+  VBox ≈ <div> principale con display:flex; flex-direction:column;
+  Qui ci si appende tutti i figli (label, HBox, button, ecc.)
+-->
+
+  <!-- gap verticale tra i figli ≈ gap / margin-bottom -->
+  <!-- centra i figli orizzontalmente ≈ align-items:center -->
+  <!-- come <link rel="stylesheet" href="styles.css"> -->
+<GridPane stylesheets="@styles.css"
+          xmlns="http://javafx.com/javafx/25"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="it.chorax.converter.MenuController"
+          styleClass="root-pane">
+  <columnConstraints>
+        <ColumnConstraints percentWidth="25"/>
+        <ColumnConstraints percentWidth="75"/>
+  </columnConstraints>
+  <rowConstraints>
+        <RowConstraints percentHeight="100" vgrow="ALWAYS"/>
+  </rowConstraints>
+  <VBox GridPane.columnIndex="0" styleClass="column-left-pane" >
+    <!-- Riga alta: logo / titolo -->
+    <HBox styleClass="sidebar-header">
+      <ImageView
+           fitWidth="120"
+           preserveRatio="true"
+           pickOnBounds="false">
+        <image>
+            <Image url="@../logo.png"/>
+        </image>
+      </ImageView>
+    </HBox>
+
+        <!-- Riga sotto: menu verticale -->
+    <VBox styleClass="sidebar-menu" >
+      <Button fx:id="converterButton" text="Unit Converter" styleClass="current-side-link" />
+      <Button text="Weather" onAction="#onWeather" styleClass="side-link"/>
+      <Button onAction="#onWorld" styleClass="side-link" text="Globe View" />
+      <Button styleClass="side-link" onAction="#onExit" text="Exit" />
+    </VBox>
+    <HBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS" styleClass="about-row">
+      <Hyperlink onAction="#onAbout" styleClass="about-link" text="About &amp; Credits" />
+    </HBox>
+  </VBox>
+  <VBox GridPane.columnIndex="1" styleClass="column-right-pane" >
+
+    <VBox styleClass="inner-pane">
+      
+      <!--
+        Titolo principale.
+        styleClass="title-label" ≈ class="title-label"
+      -->
+      <Label text="Unit Converter" styleClass="title-label">
+        <VBox.margin>
+                  <Insets top="30" right="0" bottom="0" left="0"/>
+        </VBox.margin>
+      </Label>
+      <!--
+        Sottotitolo / descrizione breve.
+      -->
+      <Label text="Available conversion types" styleClass="subtitle-label">
+        <VBox.margin>
+                  <Insets top="0" right="0" bottom="40" left="0"/>
+        </VBox.margin>
+      </Label>
+
+      <HBox alignment="CENTER" styleClass="row">
+        <Hyperlink fx:id="temperatureLink" text="• Temperature" styleClass="misure-link" onAction="#switchRoot">
+          <HBox.margin>
+                  <Insets top="-8" right="15" bottom="-8" left="0"/>
+          </HBox.margin>
+        </Hyperlink>
+      </HBox>
+      <HBox alignment="CENTER" styleClass="row">
+        <Hyperlink fx:id="pressureLink" text="• Pressure" styleClass="misure-link" onAction="#switchRoot">
+          <HBox.margin>
+                  <Insets top="-8" right="15" bottom="-8" left="0"/>
+          </HBox.margin>
+        </Hyperlink>
+      </HBox>
+      <HBox alignment="CENTER" styleClass="row">
+        <Hyperlink fx:id="lengthLink" text="• Length" styleClass="misure-link" onAction="#switchRoot">
+          <HBox.margin>
+                  <Insets top="-8" right="15" bottom="-8" left="0"/>
+          </HBox.margin>
+        </Hyperlink>
+      </HBox>
+      <HBox alignment="CENTER" styleClass="row">
+        <Hyperlink fx:id="speedLink" text="• Speed" styleClass="misure-link" onAction="#switchRoot">
+          <HBox.margin>
+                  <Insets top="-8" right="15" bottom="-8" left="0"/>
+          </HBox.margin>
+        </Hyperlink>
+      </HBox>
+    
+      <!--
+        <Hyperlink text="␛" styleClass="back-link" onAction="#esc" />
+      -->
+    </VBox>
+  </VBox>
+</GridPane>

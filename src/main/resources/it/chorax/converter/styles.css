@@ -1,0 +1,177 @@
+/*
+ * Copyright (C) 2026 Alessio Severi
+ *
+ * This file is part of Weather Station.
+ *
+ * Weather Station is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Weather Station is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Weather Station. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+
+.root-pane {
+
+    -fx-vgap: 0;
+    -fx-hgap: 20;
+    -fx-padding: 0;
+    -fx-background-color: #24252a;
+}
+
+.column-left-pane {
+    -fx-alignment: top-center;
+    -fx-background-color:#0c0f169a; /* colore di base (nero/blu molto scuro) */
+    -fx-border-color: #353840;
+    -fx-border-width: 0 1 0 0;
+
+}
+
+
+.column-right-pane {
+    -fx-alignment: top-center;
+    -fx-background-color: #24252a;
+    
+}
+
+
+.inner-pane {
+    -fx-padding: 20;                    /* padding:20px; */
+    -fx-background-color: #24252a;      /* background-color */
+    -fx-spacing: 22;                    /* gap verticale tra figli (solo per VBox) */
+    -fx-alignment: top-left;
+    -fx-max-width: 490;
+}
+
+/* Titolo principale: simile a h1.title-label { ... } */
+.title-label {
+    -fx-text-fill: #ffffff;             /* color: white; */
+    -fx-font-size: 30px;                /* font-size:22px; */
+    -fx-font-weight: bold;              /* font-weight:bold; */
+}
+
+/* Sottotitolo: simile a p.subtitle-label */
+.subtitle-label {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 18px;
+}
+
+
+
+.row {
+    -fx-background-color: #2e303b;      /* background-color */
+    -fx-padding: 20 10 20 5;
+}
+
+
+
+
+
+/* in menu */
+.misure-link {
+    -fx-border-width: 0;
+    -fx-font-size: 22px;
+    -fx-wrap-text: true;                /* word-wrap:break-word; */
+    -fx-text-fill: #3a7ee2;
+}
+
+
+
+
+
+/* Riga alta (logo / titolo)  */
+.sidebar-header {
+    -fx-alignment: CENTER;
+    -fx-padding: 10 0 10 0;
+    -fx-min-height: 250;
+}
+
+.sidebar-logo-text {
+    -fx-text-fill: #f5f5f5;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Contenitore del menu 100 0 0 40*/
+.sidebar-menu {
+    -fx-padding: 100 40 0 40;
+    -fx-alignment: CENTER;
+}
+
+/* Link laterali */
+.side-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-max-width: 170;
+
+    -fx-alignment: CENTER;
+    -fx-padding: 15;
+
+    /* bordino sopra e sotto, bianco molto tenue
+    -fx-border-color: rgba(255, 255, 255, 0.18) transparent
+                      rgba(255, 255, 255, 0.18) transparent;
+    */
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+
+    -fx-border-width: 0 0 1.3 0;
+    -fx-cursor: hand;
+}
+
+.current-side-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-max-width: 170;
+
+    -fx-alignment: CENTER;
+    -fx-padding: 15;
+
+    /* bordino sopra e sotto, bianco molto tenue
+    -fx-border-color: rgba(255, 255, 255, 0.18) transparent
+                      rgba(255, 255, 255, 0.18) transparent;
+    */
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+
+    -fx-border-width: 0 0 1.3 0;
+}
+
+/* Hover: leggero highlight */
+.side-link:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Voce attiva (tipo "Services" nero nella reference) */
+.side-link-active {
+    
+    /* sopra resta uguale, sotto molto più chiaro = “dove sono” */
+    -fx-border-color: transparent transparent #4d80ff transparent;
+}
+
+
+
+
+
+.about-row {
+    -fx-padding: 0 0 40 0;
+}
+
+
+/* Voce attiva (tipo "Services" nero nella reference) */
+.about-link {
+    -fx-underline: false;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+}
+
+.about-link:hover {
+    -fx-text-fill: #4d80ff;
+}

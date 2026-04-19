@@ -1,0 +1,189 @@
+/*
+ * Copyright (C) 2026 Alessio Severi
+ *
+ * This file is part of Weather Station.
+ *
+ * Weather Station is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Weather Station is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Weather Station. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+
+.root-pane {
+    -fx-alignment: top-center;
+    -fx-background-color: #24252a;
+    
+}
+
+
+.inner-pane {
+    -fx-padding: 20;                    /* padding:20px; */
+    -fx-background-color: #24252a;      /* background-color */
+    -fx-spacing: 22;                    /* gap verticale tra figli (solo per VBox) */
+    -fx-alignment: top-left;
+    -fx-max-width: 800;                 /* 490*/
+}
+
+/* Titolo principale: simile a h1.title-label { ... } */
+.title-label {
+    -fx-text-fill: #ffffff;             /* color: white; */
+    -fx-font-size: 30px;                /* font-size:22px; */
+    -fx-font-weight: bold;              /* font-weight:bold; */
+}
+
+/* Sottotitolo: simile a p.subtitle-label */
+.subtitle-label {
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 18px;
+}
+
+
+
+.row {
+    -fx-background-color: #2e303b;      /* background-color */
+    -fx-padding: 20 10 20 5;
+}
+
+
+/* ComboBox: simile a select.unit-combo */
+.unit-combo {
+    -fx-max-width: 350;                /* 135 width suggerita */
+    -fx-min-width: 200;
+    -fx-font-weight: 700;
+    -fx-background-insets: 0;         /* un solo layer */
+}
+
+/* Colore del testo nella parte "nascosta", "vista di default senza tastierino", "tastino nel menu a discesa", "gli ultimi due"
+.combo-box .cell, .combo-box-base .label, .combo-box-base .arrow-button, .combo-box-base { */
+.unit-combo .cell, .combo-box-base {
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+    -fx-background-radius: 6;
+    -fx-text-fill: #282828be;
+    -fx-border-color: #ffffff;
+    -fx-background-color: #ffffff;
+                  /* border-radius:4px; */
+}
+
+/* Facoltativo: stato selezionato / hover nel menu
+.combo-box .list-cell:selected,*/
+.unit-combo .list-cell:hover {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #3b6ea8;
+    
+}
+
+.combo-box-base:showing,    /* la combo ha il menu aperto */
+.combo-box-base:hover {
+    -fx-border-color: #3b6ea8;
+    
+}
+
+
+/* Etichetta freccia → */
+.arrow-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+
+
+.input-label {
+    -fx-text-fill: #3a7ee2;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    /*-fx-padding: 0 10 0 5;*/
+}
+
+
+/* Campo input: simile a input[type=text].input-field */
+.input-field {
+    -fx-pref-width: 120;                /* width:60px (preferred width) */
+    -fx-background-color: #ffffff;
+    -fx-font-weight: 700;
+    -fx-padding: 4 8 4 8;               /* padding:4px 8px; */
+}
+
+/* Pulsante Convert: simile a button.convert-button */
+.convert-button {
+    -fx-background-color: #3a7ee2;      /* background-color */
+    -fx-text-fill: #ffffff;             /* color:white */
+    -fx-font-weight: 700;
+    -fx-padding: 4 14 4 14;
+    -fx-background-radius: 4;           /* border-radius */
+}
+
+/* Stato hover: come .convert-button:hover in CSS */
+.convert-button:hover {
+    -fx-background-color: #2f68b5;
+}
+
+
+
+
+
+
+/* La “cornice” del report */
+.report-card {
+    -fx-background-color: #252734;        /* colore interno (come prima) */
+    -fx-padding: 20;                      /* spazio interno */
+    -fx-border-color: #4d80ff;            /* colore del bordo */
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    
+}
+
+/* ScrollPane trasparente, niente bianco a destra */
+.report-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.report-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+
+/* Etichetta risultato: simile a #result { ... } */
+.result-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-wrap-text: true;                /* word-wrap:break-word; */
+    -fx-padding: 10 15 0 0;
+}
+
+
+
+
+
+.back-row {
+    -fx-padding: 60 50 0 0;
+}
+
+
+.back-link {
+    -fx-border-width: 0;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 44px;
+    -fx-padding: 0;
+}
+
+
+.back-link:hover,
+.back-link:visited {
+    -fx-underline: false;
+    -fx-text-fill: #3a7ee2;
+}
+
+

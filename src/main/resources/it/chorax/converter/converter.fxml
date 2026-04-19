@@ -1,0 +1,113 @@
+<!--
+  Copyright (C) 2026 Alessio Severi
+
+  This file is part of Weather Station.
+
+  Weather Station is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Weather Station is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Weather Station. If not, see <https://www.gnu.org/licenses/>.
+-->
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+
+<VBox styleClass="root-pane" stylesheets="@styles-converter.css"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="it.chorax.converter.ConverterController">   <!-- class="root-pane" in HTML -->
+
+  <VBox styleClass="inner-pane">
+    
+    <!--
+      Titolo principale.
+      styleClass="title-label" ≈ class="title-label"
+    -->
+    <Label styleClass="title-label" text="Unit Converter">
+      <VBox.margin>
+                <Insets bottom="0" left="0" right="0" top="30" />
+      </VBox.margin>
+    </Label>
+    <!--
+      Sottotitolo / descrizione breve.
+    -->
+    <Label fx:id="nameMisureLabel" styleClass="subtitle-label" text="">
+      <VBox.margin>
+                <Insets bottom="40" left="0" right="0" top="0" />
+      </VBox.margin>
+    </Label>
+
+
+    <!--
+      HBox ≈ <div> con display:flex; flex-direction:row;
+      Qui mettiamo input + combobox "da" + combobox "a".
+    -->
+    <HBox alignment="CENTER" spacing="18" styleClass="row">
+
+        <!-- ComboBox ≈ <select> per unità di partenza -->
+        <ComboBox fx:id="fromUnitBox" styleClass="unit-combo" />
+
+        <!-- Label "→" giusto per estetica, come in HTML ci metteresti uno span -->
+        <Label styleClass="arrow-label" text="→" />
+
+        <!-- ComboBox ≈ <select> per unità di arrivo -->
+        <ComboBox fx:id="toUnitBox" styleClass="unit-combo" />
+
+    </HBox>
+
+    <HBox alignment="CENTER" styleClass="row">
+      <Label styleClass="input-label" text="INPUT:">
+        <HBox.margin>
+                <Insets bottom="10" left="-40" right="15" top="10" />
+        </HBox.margin>
+      </Label>
+
+      <!-- TextField ≈ <input type="text" placeholder="Value"> -->
+      <TextField fx:id="inputField" prefColumnCount="8" promptText="Value" styleClass="input-field" /> <!-- larghezza “in caratteri” -->
+      
+      <!--
+      Pulsante Convert ≈ <button>Convert</button>
+      onAction="#handleConvert" ≈ onclick="handleConvert()" che chiama metodo del controller.
+      -->
+      <Button onAction="#handleConvert" styleClass="convert-button" text="Convert">
+        <HBox.margin>
+                <Insets bottom="10.5" left="27" right="47" top="9.5" />
+        </HBox.margin>
+      </Button>
+    </HBox>
+    
+    <!--
+      Label risultato ≈ <div id="result">...<div>
+      fx:id="resultLabel" ≈ id="resultLabel" usato dal controller Java.
+    -->
+    <ScrollPane fitToWidth="true" styleClass="report-scroll">
+      <content>
+            <!-- Questa è la “cartolina” con bordo -->
+            <VBox alignment="CENTER" styleClass="report-card">   <!-- larghezza massima della card -->
+              <Label fx:id="resultLabel" styleClass="result-label" text="• Result will be shown here" />
+            </VBox>
+      </content>
+    </ScrollPane>
+    <HBox alignment="BOTTOM_RIGHT" styleClass="back-row">
+      <Hyperlink onAction="#switchRoot" styleClass="back-link" text="↩︎" />
+    </HBox>
+  </VBox>
+</VBox>
