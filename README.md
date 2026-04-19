@@ -9,7 +9,7 @@ For a detailed technical description and documentation, visit: [chorax.it](https
 
 <div align="center">
   <img src="screenshots/02.png" width="75%" alt="Weather view"/>
-  <br><
+  <br>
   <img src="screenshots/04.png" width="75%" alt="Graph view"/>
   <br>
   <img src="screenshots/13.png" width="75%" alt="Unit Converter"/>
