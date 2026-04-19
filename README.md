@@ -21,7 +21,7 @@ For a detailed technical description and documentation, visit: [chorax.it](https
   <em>The globe rotates continuously in the application.</em>
 </div>
 
-<br><br>
+<br>
 
 More screenshots available in the [screenshots](screenshots/) folder.
 
