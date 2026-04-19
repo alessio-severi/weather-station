@@ -9,13 +9,13 @@ For a detailed technical description and documentation, visit: [chorax.it](https
 
 <div align="center">
   <img src="screenshots/02.png" width="75%" alt="Weather view"/>
-  <br><br>
+  <br><
   <img src="screenshots/04.png" width="75%" alt="Graph view"/>
-  <br><br>
+  <br>
   <img src="screenshots/13.png" width="75%" alt="Unit Converter"/>
-  <br><br>
+  <br>
   <img src="screenshots/15.png" width="75%" alt="Unit Converter result"/>
-  <br><br>
+  <br>
   <img src="screenshots/27.png" width="75%" alt="Globe View"/>
   <br>
   <em>The globe rotates continuously in the application.</em>
