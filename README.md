@@ -17,11 +17,11 @@ For a detailed technical description and documentation, visit: [chorax.it](https
   <img src="screenshots/15.png" width="75%" alt="Unit Converter result"/>
   <br><br>
   <img src="screenshots/27.png" width="75%" alt="Globe View"/>
+  <br>
+  <em>The globe rotates continuously in the application.</em>
 </div>
 
-<br>
-
-*The globe rotates continuously in the application.*
+<br><br>
 
 More screenshots available in the [screenshots](screenshots/) folder.
 
