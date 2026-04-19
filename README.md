@@ -8,13 +8,13 @@ For a detailed technical description and documentation, visit: [chorax.it](https
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/03.png" width="75%" alt="Weather view"/>
+  <img src="screenshots/02.png" width="75%" alt="Weather view"/>
   <br><br>
   <img src="screenshots/04.png" width="75%" alt="Graph view"/>
   <br><br>
-  <img src="screenshots/14.png" width="75%" alt="Unit Converter"/>
+  <img src="screenshots/13.png" width="75%" alt="Unit Converter"/>
   <br><br>
-  <img src="screenshots/16.png" width="75%" alt="Unit Converter result"/>
+  <img src="screenshots/15.png" width="75%" alt="Unit Converter result"/>
   <br><br>
   <img src="screenshots/27.png" width="75%" alt="Globe View"/>
 </div>
