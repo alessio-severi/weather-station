@@ -51,26 +51,26 @@ public interface Coordinates {
     public enum ItalianCapital {
 
 
-        ROMA       ("Rome",        "Lazio",                     "41.9028", "12.4964"),
+        ANCONA     ("Ancona",      "Marche",                    "43.6158", "13.5189"),
+        AOSTA      ("Aosta",       "Aosta Valley",              "45.7376", "7.3201"),
+        BARI       ("Bari",        "Apulia",                    "41.1171", "16.8719"),
+        BOLOGNA    ("Bologna",     "Emilia-Romagna",            "44.4949", "11.3426"),
+        CAGLIARI   ("Cagliari",    "Sardinia",                  "39.2238", "9.1217"),
+        CAMPOBASSO ("Campobasso",  "Molise",                    "41.5600", "14.6640"),
+        CATANZARO  ("Catanzaro",   "Calabria",                  "38.9098", "16.5877"),
+        FIRENZE    ("Florence",    "Tuscany",                   "43.7696", "11.2558"),
+        GENOVA     ("Genoa",       "Liguria",                   "44.4056", "8.9463"),
+        LAQUILA    ("L'Aquila",    "Abruzzo",                   "42.3499", "13.3995"),
         MILANO     ("Milan",       "Lombardy",                  "45.4642", "9.1900"),
-        TORINO     ("Turin",       "Piedmont",                  "45.0703", "7.6869"),
         NAPOLI     ("Naples",      "Campania",                  "40.8518", "14.2681"),
         PALERMO    ("Palermo",     "Sicily",                    "38.1157", "13.3613"),
-        CAGLIARI   ("Cagliari",    "Sardinia",                  "39.2238", "9.1217"),
-        GENOVA     ("Genoa",       "Liguria",                   "44.4056", "8.9463"),
-        BOLOGNA    ("Bologna",     "Emilia-Romagna",            "44.4949", "11.3426"),
-        FIRENZE    ("Florence",    "Tuscany",                   "43.7696", "11.2558"),
-        VENEZIA    ("Venice",      "Veneto",                    "45.4408", "12.3155"),
-        BARI       ("Bari",        "Apulia",                    "41.1171", "16.8719"),
-        LAQUILA    ("L'Aquila",    "Abruzzo",                   "42.3499", "13.3995"),
-        ANCONA     ("Ancona",      "Marche",                    "43.6158", "13.5189"),
         PERUGIA    ("Perugia",     "Umbria",                    "43.1107", "12.3908"),
-        CAMPOBASSO ("Campobasso",  "Molise",                    "41.5600", "14.6640"),
         POTENZA    ("Potenza",     "Basilicata",                "40.6401", "15.8050"),
-        CATANZARO  ("Catanzaro",   "Calabria",                  "38.9098", "16.5877"),
-        AOSTA      ("Aosta",       "Aosta Valley",              "45.7376", "7.3201"),
+        ROMA       ("Rome",        "Lazio",                     "41.9028", "12.4964"),
         TRENTO     ("Trento",      "Trentino-South Tyrol",      "46.0700", "11.1211"),
-        TRIESTE    ("Trieste",     "Friuli-Venezia Giulia",     "45.6495", "13.7768");
+        TRIESTE    ("Trieste",     "Friuli-Venezia Giulia",     "45.6495", "13.7768"),
+        TORINO     ("Turin",       "Piedmont",                  "45.0703", "7.6869"),
+        VENEZIA    ("Venice",      "Veneto",                    "45.4408", "12.3155");
 
 
         
