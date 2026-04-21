@@ -1,7 +1,7 @@
 # Weather Station 1.2
 
 Weather Station 1.2 is a non-commercial macOS desktop application developed by Alessio Severi as a portfolio project.
-It shows current weather conditions and 7-day weather forecasts for Italian regional capitals, with a textual weather report, a unit converter for common meteorological quantities, a set of interactive charts that can be exported as PNG images, and a simple 3D globe view.
+It shows current weather conditions and 7-day weather forecasts for Italian regional capitals, with a textual weather report, a unit converter for common meteorological quantities, a set of interactive charts that can be exported as PNG images, and a dynamic 3D globe view.
 
 For a detailed technical description and documentation, visit: [chorax.it](https://chorax.it)
 
